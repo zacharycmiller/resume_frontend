@@ -1,0 +1,15 @@
+.full-name-container {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.job-title {
+    margin-top: 1%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.introduction {
+    font-size: small;
+}
