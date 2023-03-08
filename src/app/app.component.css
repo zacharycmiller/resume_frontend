@@ -80,10 +80,6 @@
     opacity: 25%;
 }
 
-.contact-container div {
-    margin-left: 3%;
-}
-
 .skill-grid-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -102,9 +98,7 @@
     padding-left: 20%;
 }
 
-.education-container div {
-    margin-left: 3%;
-}
+
 
 .degree-type {
     font-size: 14px;

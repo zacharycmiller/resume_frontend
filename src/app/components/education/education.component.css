@@ -1,0 +1,11 @@
+.education-container div {
+    margin-left: 3%;
+}
+
+.education-container h4 {
+    margin: 1%;
+}
+
+.education-container hr {
+    opacity: 25%;
+}
