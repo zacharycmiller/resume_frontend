@@ -1,0 +1,21 @@
+.sites-container div {
+    margin-left: 3%;
+}
+
+.sites-container h4 {
+    margin: 1%;
+}
+
+.sites-container hr {
+    opacity: 25%;
+}
+
+.linkedin a {
+    font-size: x-small;
+}
+
+div a {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+}
