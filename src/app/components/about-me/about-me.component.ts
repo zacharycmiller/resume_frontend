@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { AboutMe } from '../models/about-me-model';
-import { AboutMeService } from '../services/about-me.service';
+import { AboutMe } from '../../models/about-me-model';
+import { AboutMeService } from '../../services/about-me.service';
 
 @Component({
   selector: 'app-about-me',

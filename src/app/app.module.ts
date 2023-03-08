@@ -5,14 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccomplishmentsComponent } from './components/accomplishments/accomplishments.component';
 import { WorkExperienceItemComponent } from './components/work-experience-item/work-experience-item.component';
-import { AboutMeComponent } from './about-me/about-me.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ImageComponent } from './components/image/image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccomplishmentsComponent,
     WorkExperienceItemComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

@@ -18,18 +18,6 @@
     width: 60%;
 }
 
-.about-me-container h1 {
-    margin-bottom: 1%;
-}
-
-.about-me-container h2 {
-    margin: 0;
-}
-
-.about-me-container p {
-    font-size: small;
-}
-
 .work-experience-container h4 {
     margin-top: 0;
     margin-bottom: 1%;
@@ -73,10 +61,6 @@
     right: 1%;
     width: 35%;
     height: fit-content;
-}
-
-.image img {
-   max-width: 100%
 }
 
 .right-side-child-container {
