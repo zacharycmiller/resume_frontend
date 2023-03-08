@@ -9,3 +9,7 @@
 .education-container hr {
     opacity: 25%;
 }
+
+.education-degree-type {
+    font-size: 14px;
+}
