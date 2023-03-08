@@ -1,0 +1,152 @@
+@media print {
+    button { display: none; }
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.resume-container {
+    background-color: rgba(212, 210, 210, 0.1);
+    position: absolute;
+    height: 97%;
+    width: 99%;
+}
+
+.left-side-container {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 60%;
+}
+
+.about-me-container h1 {
+    margin-bottom: 1%;
+}
+
+.about-me-container h2 {
+    margin: 0;
+}
+
+.about-me-container p {
+    font-size: small;
+}
+
+.work-experience-container h4 {
+    margin-top: 0;
+    margin-bottom: 1%;
+    padding: 0;
+}
+
+.work-experience-child-container {
+    margin-bottom: 5px;
+    font-size: small;
+}
+
+.work-experience-child-container ul {
+    margin: 0;
+}
+
+.revature-child-container {
+    border: 1px solid rgba(235, 234, 238, 0.1);
+    background-color: rgba(210, 210, 212, 0.1);
+    border-radius: 1%;
+    margin-left: 3%;
+    margin-top: 10px;
+    padding: 1%;
+}
+
+.cognizant-child-container {
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+.previous-it-experience {
+    margin-top: 4%;
+}
+
+
+.right-side-container {
+    border: 1px solid rgba(230, 224, 224, 0.2);
+    background-color: rgba(214, 221, 243, 0.1);
+    border-radius: 1%;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    width: 35%;
+    height: fit-content;
+}
+
+.image img {
+   max-width: 100%
+}
+
+.right-side-child-container {
+    border: 1px solid rgba(230, 224, 224, 0.2);
+    background-color: rgba(214, 221, 243, 0.1);
+    margin-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+
+.right-side-child-container h4 {
+    margin: 1%;
+}
+
+.right-side-child-container hr {
+    opacity: 25%;
+}
+
+.contact-container div {
+    margin-left: 3%;
+}
+
+.skill-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.skill-grid-item-container {
+    border: 1px solid rgba(230, 224, 224, 0.2);
+    background-color: rgba(214, 221, 243, 0.1);
+    margin: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.skill-grid-item-container ul {
+    margin-top: 5%;
+    padding-left: 20%;
+}
+
+.education-container div {
+    margin-left: 3%;
+}
+
+.degree-type {
+    font-size: 14px;
+}
+
+.links-container div {
+    margin-left: 3%;
+}
+
+.job-title-and-dates {
+}
+
+.dates {
+    float: right;
+}
+
+.linkedin a {
+    font-size: x-small;
+}
+
+div a {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+}
