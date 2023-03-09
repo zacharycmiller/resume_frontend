@@ -7,19 +7,20 @@ import { AboutMeService } from '../../services/about-me.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css']
 })
+
 export class AboutMeComponent {
-@Input() id!: number;
-aboutMe!: AboutMe;
+  @Input() id!: number;
+  aboutMe!: AboutMe;
 
-ngOnInit(): void {
-  this.getAboutMeSectionData(this.id);
-}
+  ngOnInit(): void {
+    this.getAboutMeSectionData(this.id);
+  }
 
-constructor(
-  private aboutMeService: AboutMeService
-) {}
+  constructor(
+    private aboutMeService: AboutMeService
+  ) {}
 
-getAboutMeSectionData(id: number) {
-  this.aboutMe = this.aboutMeService.getAboutMeSection(id)
-}
+  getAboutMeSectionData(id: number) {
+    this.aboutMe = this.aboutMeService.getAboutMeSection(id)
+  }
 }
