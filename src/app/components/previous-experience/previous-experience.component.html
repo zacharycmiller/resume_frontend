@@ -1,0 +1,17 @@
+<div class="previous-experience" *ngIf="previousExperience">
+    
+    <h4 class="header">Previous Experience</h4>
+
+    <div class="previous-experience-child-container" *ngFor="let item of previousExperience">
+
+        <div class="job-information">
+            <span class="job-title">{{item.jobTitle}}</span>
+            <span class="dates">{{item.startMonth}} {{item.startYear}} - {{item.endMonth}} {{item.endYear}}</span>
+        </div>
+
+        <div class="job-information">
+            <span class="job-title">{{item.companyName}}</span>
+            <span class="dates">{{item.city}}, {{item.state}}</span>
+        </div>
+    </div>
+</div>
