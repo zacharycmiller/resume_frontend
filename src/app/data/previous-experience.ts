@@ -33,6 +33,6 @@ export const PREVIOUS_EXPERIENCE: PreviousExperience[] = [
         endYear: '2005',
         city: '',
         state: ''
-    },
+    }
     
 ]

@@ -68,35 +68,3 @@
     padding-bottom: 1%;
     padding-left: 1%;
 }
-
-.right-side-child-container h4 {
-    margin: 1%;
-}
-
-.right-side-child-container hr {
-    opacity: 25%;
-}
-
-.skill-grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.skill-grid-item-container {
-    border: 1px solid rgba(230, 224, 224, 0.2);
-    background-color: rgba(214, 221, 243, 0.1);
-    margin: 2%;
-    padding-top: 2%;
-    padding-left: 2%;
-}
-
-.skill-grid-item-container ul {
-    margin-top: 5%;
-    padding-left: 20%;
-}
-
-
-
-
-
-

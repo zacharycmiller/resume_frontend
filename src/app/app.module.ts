@@ -11,6 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { PreviousExperienceComponent } from './components/previous-experience/previous-experience.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PreviousExperienceComponent } from './components/previous-experience/pr
     ContactComponent,
     EducationComponent,
     SitesComponent,
-    PreviousExperienceComponent
+    PreviousExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
