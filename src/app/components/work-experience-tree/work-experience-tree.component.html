@@ -1,0 +1,92 @@
+<div class="work-experience-container">
+    <h4>Work Experience</h4>
+
+    <div class="work-experience-item-container">
+        <div class="job-title-and-dates">
+            <span class="job-title">{{item.jobTitle}}</span>
+            <span class="dates">{{item.startMonth}} {{item.startYear}} - {{item.endMonth}} {{item.endYear}}</span>
+        </div>
+
+        <div class="company-name-and-location">
+            <span class="company-name">{{item.companyName}}</span>
+            <span class="location">{{item.location}}</span>
+        </div>
+    </div>
+
+    <div *ngFor="let child of item.children">
+
+        <div class="work-experience-item-child-container">
+
+            <div *ngIf="child.children.length > 0">
+                <div>
+                    <span>{{child.jobTitle}}</span>
+                    <span style="float:right">{{child.startMonth}} {{child.startYear}} - {{child.endMonth}} {{child.endYear}}</span>
+                </div> 
+                
+                <div *ngIf="child.type != 'Training'">
+                    <span>{{child.type}}: </span>
+                    <span *ngIf="child.type != 'Bench'">{{child.companyName}}</span>
+                    <span style="float:right">{{child.location}}</span>
+                </div>
+                
+                <div *ngIf="child.type === 'Training'">
+                    <span>{{child.type}} | </span>
+                    <span>{{child.location}}</span>
+                </div>
+
+                
+                <!--GRANDCHILD-->
+                <div class="work-experience-item-grandchild-container" *ngFor="let grandchild of child.children">
+
+                    <div>
+                        <span *ngIf="child.jobTitle != grandchild.jobTitle">{{grandchild.jobTitle}}</span>
+                        <span>{{grandchild.startMonth}} {{grandchild.startYear}} - {{grandchild.endMonth}} {{grandchild.endYear}}</span>
+                    </div> 
+                    
+                    <div *ngIf="grandchild.type != 'Training'">
+                        <span>{{grandchild.type}}</span>
+                        <span *ngIf="grandchild.type != 'Bench'">: {{grandchild.companyName}}</span>
+                        <span> | {{grandchild.location}}</span>
+                    </div>
+                    
+                    <div *ngIf="grandchild.type === 'Training'">
+                        <span>{{grandchild.type}} | </span>
+                        <span>{{grandchild.location}}</span>
+                    </div>
+
+                    <div>
+                        <span *ngIf="grandchild.type === 'Training'">{{grandchild.details}}</span>
+                        <ul *ngIf="grandchild.type != 'Training'">
+                            <li *ngFor="let detail of grandchild.details">{{detail}}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!--END-GRANDCHILD-->
+            </div>
+            
+            <div *ngIf="child.children.length === 0">
+                <div>{{child.startMonth}} {{child.startYear}} - {{child.endMonth}} {{child.endYear}}</div> 
+                
+                <div *ngIf="child.type != 'Training'">
+                    <span>{{child.type}} | </span>
+                    <span *ngIf="child.type != 'Bench'">{{child.companyName}} | </span>
+                    <span>{{child.location}}</span>
+                </div>
+                
+                <div *ngIf="child.type === 'Training'">
+                    <span>{{child.type}} | </span>
+                    <span>{{child.location}}</span>
+                </div>
+
+                <div>
+                    <span *ngIf="child.type === 'Training'">{{child.details}}</span>
+                    <ul *ngIf="child.type != 'Training'">
+                        <li *ngFor="let detail of child.details">{{detail}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

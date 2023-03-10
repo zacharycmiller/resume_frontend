@@ -1,0 +1,42 @@
+.work-experience-container h4 {
+    margin-top: 0;
+    margin-bottom: 1%;
+    padding: 0;
+}
+
+.work-experience-item-container {
+    margin-bottom: 5px;
+    font-size: small;
+}
+
+.work-experience-item-container .dates {
+    float: right;
+}
+
+.work-experience-item-container .location {
+    float: right;
+}
+
+.work-experience-item-child-container {
+    border: 1px solid rgba(235, 234, 238, 0.1);
+    background-color: rgba(210, 210, 212, 0.1);
+    border-radius: 1%;
+    margin-left: 3%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: small;
+    padding: 1%;
+}
+
+.work-experience-item-child-container ul {
+    margin: 0;
+}
+
+.work-experience-item-grandchild-container {
+    border: 1px solid rgba(235, 234, 238, 0.1);
+    background-color: rgba(210, 210, 212, 0.1);
+    border-radius: 1%;
+    margin-left: 3%;
+    margin-top: 10px;
+    padding: 1%;
+}
