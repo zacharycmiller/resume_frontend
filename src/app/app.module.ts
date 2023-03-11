@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccomplishmentsComponent } from './components/accomplishments/accomplishments.component';
-import { WorkExperienceItemComponent } from './components/work-experience-item/work-experience-item.component';
+import { WorkExperienceTreeComponent } from './components/work-experience-tree/work-experience-tree.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ImageComponent } from './components/image/image.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -17,7 +17,7 @@ import { SkillsComponent } from './components/skills/skills.component';
   declarations: [
     AppComponent,
     AccomplishmentsComponent,
-    WorkExperienceItemComponent,
+    WorkExperienceTreeComponent,
     AboutMeComponent,
     ImageComponent,
     ContactComponent,

@@ -27,9 +27,7 @@ export class SkillsComponent {
   getSkillCategories(): void {
     this.skills.forEach( skill => {
       if( !this.categories.includes(skill.category) ) {
-        console.log('category ', skill.category, ' not found in categories[]');
         this.categories.push(skill.category)
-        console.log(this.categories.toString());
       }
     });
   }
