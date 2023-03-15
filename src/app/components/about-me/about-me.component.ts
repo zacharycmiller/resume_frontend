@@ -13,14 +13,15 @@ export class AboutMeComponent {
   aboutMe!: AboutMe;
 
   ngOnInit(): void {
-    this.getAboutMeSectionData(this.id);
+    this.getAboutMe(this.id);
   }
 
   constructor(
     private aboutMeService: AboutMeService
   ) {}
 
-  getAboutMeSectionData(id: number) {
-    this.aboutMe = this.aboutMeService.getAboutMeSection(id)
+  getAboutMe(id: number): void {
+    this.aboutMeService.getAboutMeById(id)
+      .subscribe(aboutMe => this.aboutMe = aboutMe);
   }
 }

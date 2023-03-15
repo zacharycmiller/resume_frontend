@@ -1,4 +1,4 @@
-<div class="about-me-container">
+<div class="about-me-container" *ngIf=aboutMe>
     <div class="full-name-container">{{aboutMe.fullName}}</div>
     <div class="job-title">{{aboutMe.jobTitle}}</div>
     <p class="introduction">{{aboutMe.introduction}}</p>
