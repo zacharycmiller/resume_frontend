@@ -77,13 +77,8 @@ export const SKILLS: Skills[] = [
         category: 'DevOps'
     },
     {
-        id: 15,
-        name: 'Jenkins',
-        category: 'DevOps'
-    },
-    {
         id: 16,
-        name: 'Docker',
+        name: 'Jira',
         category: 'DevOps'
     }
 ]
