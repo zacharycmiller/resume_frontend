@@ -10,18 +10,26 @@ import { ImageService } from 'src/app/services/image.service';
 })
 export class ImageComponent {
   image!: Image;
-  source!: string;
+  imageUrl!: string;
 
   ngOnInit(): void {
-    this.getImage();
+    
   }
 
   constructor(
     private imageService: ImageService
-  ) {}
+  ) {
+    this.imageService.getImageById(999999).subscribe(response => {
+      console.log(response.toString())
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        this.imageUrl = reader.result!.toString();
+      };
+      reader.readAsDataURL(response);
+    });
+  }
 
-  getImage(): void {
-    this.image = this.imageService.getImage();
-    this.source = "../assets/" + this.image.fileName;
+  getImage(id: number): void {
+    
   }
 }
