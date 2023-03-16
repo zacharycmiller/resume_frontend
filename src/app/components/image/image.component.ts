@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-
-import { Image } from 'src/app/models/image-model';
+import { Component, Input } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -9,27 +7,24 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent {
-  image!: Image;
+  @Input() id!: number;
   imageUrl!: string;
 
   ngOnInit(): void {
-    
+    this.getImageById(this.id);
   }
 
   constructor(
     private imageService: ImageService
-  ) {
-    this.imageService.getImageById(999999).subscribe(response => {
-      console.log(response.toString())
+  ) {}
+
+  getImageById(id: number): void {
+    this.imageService.getImageById(this.id).subscribe(response => {
       const reader = new FileReader();
       reader.onloadend = () => {
         this.imageUrl = reader.result!.toString();
       };
       reader.readAsDataURL(response);
     });
-  }
-
-  getImage(id: number): void {
-    
   }
 }
