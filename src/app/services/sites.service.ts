@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Sites } from '../models/sites-model';
+import { Site } from '../models/site-model';
 import { SITES } from '../data/sites';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class SitesService {
 
   constructor() { }
 
-  getSites(): Sites {
+  getSites(): Site[] {
     return SITES;
   }
 }

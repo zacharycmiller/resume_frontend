@@ -10,12 +10,8 @@
     opacity: 25%;
 }
 
-.linkedin a {
-    font-size: x-small;
-}
-
 div a {
     text-decoration: none;
-    font-size: small;
+    font-size: x-small;
     color: black;
 }
