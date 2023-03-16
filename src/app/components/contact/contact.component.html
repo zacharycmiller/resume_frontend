@@ -1,7 +1,7 @@
-<div class="contact-container">
+<div class="contact-container" *ngIf="contact">
     <h4 class="contact-header">CONTACT</h4>
     <hr>
     <div class="contact-location">{{contact.city}}, {{contact.state}}</div>
-    <div class="contact-phone-number">{{contact.phoneNumber}}</div>
+    <div class="contact-phone-number">{{contact.phoneNumber | mask: '(000) 000-0000'}}</div>
     <div class="contact-email">{{contact.email}}</div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Contact } from 'src/app/models/contact';
 import { ContactService } from 'src/app/services/contact.service';
@@ -9,17 +9,19 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  @Input() id!: number;
   contact!: Contact;
   
   ngOnInit(): void {
-    this.getContactInformation();
+    this.getContactById(this.id);
   }
 
   constructor(
     private contactService: ContactService
   ) {}
 
-  getContactInformation(): void {
-    this.contact = this.contactService.getContactInformation();
+  getContactById(id: number): void {
+    this.contactService.getContactById(id)
+    .subscribe(contact => this.contact = contact);
   }
 }

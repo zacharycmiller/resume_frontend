@@ -13,6 +13,7 @@ import { EducationComponent } from './components/education/education.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { PreviousExperienceComponent } from './components/previous-experience/previous-experience.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,11 @@ import { SkillsComponent } from './components/skills/skills.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
