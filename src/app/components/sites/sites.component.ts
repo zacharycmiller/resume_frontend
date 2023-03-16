@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Sites } from 'src/app/models/sites-model';
+import { Site } from 'src/app/models/site-model';
 import { SitesService } from 'src/app/services/sites.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { SitesService } from 'src/app/services/sites.service';
   styleUrls: ['./sites.component.css']
 })
 export class SitesComponent {
-  sites!: Sites;
+  sites!: Site[];
 
   ngOnInit(): void {
     this.getSites();
