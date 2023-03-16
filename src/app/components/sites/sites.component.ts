@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Site } from 'src/app/models/site-model';
 import { SitesService } from 'src/app/services/sites.service';
 
@@ -8,17 +8,19 @@ import { SitesService } from 'src/app/services/sites.service';
   styleUrls: ['./sites.component.css']
 })
 export class SitesComponent {
+  @Input() resumeId!: number;
   sites!: Site[];
 
   ngOnInit(): void {
-    this.getSites();
+    this.getSites(this.resumeId);
   }
   
   constructor(
     private siteService: SitesService
   ) {}
 
-  getSites(): void {
-    this.sites = this.siteService.getSites();
+  getSites(resumeId: number): void {
+    this.siteService.getSitesByResumeId(this.resumeId)
+      .subscribe(sites => this.sites = sites);
   }
 }
