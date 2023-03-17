@@ -2,10 +2,11 @@
     <h4>SKILLS</h4>
     <hr>
     <div class="skill-grid-container">
-        <div class="skill-grid-item-container" *ngFor="let category of categories">
-            <span class="category-header">{{category}}</span> 
+        <div class="skill-grid-item-container" *ngFor="let selectedCategory of categories; trackBy: trackByCategory">
+           
+            <span class="category-header">{{selectedCategory}}</span> 
             <ul>
-                <li *ngFor="let skill of getSkillsByCategory(category)">{{skill}}</li>
+                <li *ngFor="let skill of filteredSkills(selectedCategory)">{{skill.name}}</li>
             </ul>
         </div>
     </div>

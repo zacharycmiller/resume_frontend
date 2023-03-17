@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Skills } from 'src/app/models/skills-model';
+import { Component, Input, OnInit } from '@angular/core';
+import { Skill, SkillCategory } from 'src/app/models/skills-model';
 import { SkillsService } from 'src/app/services/skills.service';
 
 @Component({
@@ -7,39 +7,31 @@ import { SkillsService } from 'src/app/services/skills.service';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent {
-  skills!: Skills[];
-  categories: string[] = [];
+export class SkillsComponent implements OnInit {
+  @Input() resumeId!: number;
+  skills!: Skill[];
+  categories: SkillCategory[] = [];
+  
+  constructor(private skillsService: SkillsService) {}
 
   ngOnInit(): void {
-    this.getSkills();
+    this.getAllSkillsByResumeId(this.resumeId);
+    this.categories = Object.values(SkillCategory);
   }
 
-  constructor(
-    private skillsService: SkillsService
-  ) {}
-
-  getSkills(): void {
-    this.skills = this.skillsService.getSkills();
-    this.getSkillCategories();
+  getAllSkillsByResumeId(resumeId: number): void {
+    this.skillsService.getAllSkillsByResumeId(resumeId)
+      .subscribe((skills: Skill[]) => {
+        this.skills = skills;
+      });
   }
 
-  getSkillCategories(): void {
-    this.skills.forEach( skill => {
-      if( !this.categories.includes(skill.category) ) {
-        this.categories.push(skill.category)
-      }
-    });
+  filteredSkills(category: SkillCategory) {
+    return this.skills.filter(skill => skill.category === category);
   }
-
-  getSkillsByCategory(category: string): string[] {
-    let skillArray: string[] = [];
-    this.skills.forEach( skill => {
-      if(skill.category === category ) {
-        skillArray.push(skill.name);
-      }
-    });
-    return skillArray;
+  
+  trackByCategory(index: number, category: SkillCategory) {
+    return category;
   }
-
+  
 }
