@@ -1,8 +1,10 @@
-<div class="education-container">
+<div class="education-container" *ngIf="educationItems">
     <h4>EDUCATION</h4>
     <hr>
-    <div class="education-institute">{{education.institute}}</div>
-    <div class="education-degree-type">{{education.degreeLevel}} - {{education.major}}</div>
-    <div class="education-location">{{education.city}}, {{education.state}}</div>
-    <div class="education-graduation-date">{{education.graduationMonth}} {{education.graduationYear}}</div>
+    <div class="education-item-container" *ngFor="let item of educationItems">
+        <div class="education-institute">{{item.institute}}</div>
+        <div class="education-degree-type">{{item.degreeLevel}} - {{item.major}}</div>
+        <div class="education-location">{{item.city}}, {{item.state}}</div>
+        <div class="education-graduation-date">{{item.graduationMonth}} {{item.graduationYear}}</div>
+    </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Education } from 'src/app/models/education-model';
 import { EducationService } from 'src/app/services/education.service';
 
@@ -8,17 +8,19 @@ import { EducationService } from 'src/app/services/education.service';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-  education!: Education;
+  @Input() resumeId!: number;
+  educationItems: Education[] = [];
 
   ngOnInit(): void {
-    this.getEducationInformation();
+    this.getEducationByResumeId(this.resumeId);
   }
 
   constructor(
     private educationService: EducationService
   ) {}
 
-  getEducationInformation(): void {
-    this.education = this.educationService.getEducationInformation();
+  getEducationByResumeId(resumeId: number): void {
+    this.educationService.getEducationByResumeId(resumeId)
+      .subscribe(educations => this.educationItems = educations);
   }
 }
