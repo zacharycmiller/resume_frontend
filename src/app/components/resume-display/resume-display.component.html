@@ -1,0 +1,10 @@
+<div class="resume-section-container" *ngIf="resumes">
+    <h4>Saved Resumes:</h4>
+    <div class="viewable-resume-container" *ngFor="let resume of resumes">
+        <div class="clickable-resume" routerLink="/resume/{{resume.id}}">{{resume.fileName}}</div>
+    </div>
+</div>
+
+<div class="image" *ngIf="!resumeUrl">
+    <button type="button" (click)="newResume(userId)">New Resume</button>
+</div>

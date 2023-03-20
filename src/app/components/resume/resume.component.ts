@@ -7,7 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
-  @Input() resumeId!: number;
+  resumeId!: number;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe((params:any) => {
+      this.resumeId = params['id'];
+    });
+  }
 }
