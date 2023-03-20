@@ -1,0 +1,31 @@
+<div class="resume-container">
+    
+    <div class="left-side-container">
+        <app-about-me [id]=resumeId></app-about-me>
+        <!--<app-work-experience-tree [resumeId]=id></app-work-experience-tree>-->
+        <app-work-experience [resumeId]=resumeId></app-work-experience>
+        <app-previous-experience></app-previous-experience>
+    </div>
+
+    <div class="right-side-container">
+
+        <app-image [id]=resumeId></app-image>
+
+        <div class="right-side-child-container">
+            <app-contact [id]=resumeId></app-contact>
+        </div>
+
+        <div class="right-side-child-container">
+            <app-skills [resumeId]=resumeId></app-skills>
+        </div>
+
+        <div class="right-side-child-container">
+            <app-education [resumeId]=resumeId></app-education>
+        </div>
+
+        <div class="right-side-child-container">
+            <app-sites [resumeId]=resumeId></app-sites>
+        </div>
+    </div>
+
+</div>
