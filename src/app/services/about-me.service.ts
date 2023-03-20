@@ -14,7 +14,7 @@ export class AboutMeService {
 
   // Method to get an AboutMe object by ID
   getAboutMeById(id: number): Observable<AboutMe> {
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.baseUrl}/1`;
     return this.http.get<AboutMe>(url);
   }
 

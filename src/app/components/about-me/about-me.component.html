@@ -1,5 +1,6 @@
 <div class="about-me-container" *ngIf=aboutMe>
-    <div class="full-name-container">{{aboutMe.fullName}}</div>
+    <input class="full-name-container" [(ngModel)]="aboutMe.fullName" placeholder="Full Name">
+    
     <div class="job-title">{{aboutMe.jobTitle}}</div>
     <p class="introduction">{{aboutMe.introduction}}</p>
 </div>
