@@ -1,0 +1,21 @@
+<div class="work-experience-container">
+    <h4>Work Experience</h4>
+    <div class="work-experience-item-container" *ngFor="let item of workExperience">
+        <div class="job-title-and-dates">
+            <span class="job-title">{{item.jobTitle}}</span>
+            <span class="dates">{{item.startMonth}} {{item.startYear}} - {{item.endMonth}} {{item.endYear}}</span>
+        </div>
+
+        <div class="company-name-and-location">
+            <span class="company-name">{{item.companyName}}</span>
+            <span class="location">{{item.location}}</span>
+        </div>
+    </div>
+
+
+</div>
+
+<!--
+<app-work-experience-form [resumeId]=resumeId></app-work-experience-form>
+<button (click)="addExperienceItem()">Add Experience</button>
+-->
