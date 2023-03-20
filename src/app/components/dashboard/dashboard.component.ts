@@ -8,7 +8,7 @@ import { ResumeService } from 'src/app/services/resume.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  userId!: number;
+  userId: number = 1;
   resumeId!: number;
 
   constructor(
@@ -17,14 +17,10 @@ export class DashboardComponent {
   ) {}
 
   ngOnInit(): void {
+    /*
     this.activatedRoute.params.subscribe((params: Params) => {
       this.userId = params['id'];
     });
-  }
-
-  newResume(userId: number): void {
-    this.resumeService.createResume(userId).subscribe( resume => {
-      this.resumeId = resume.resumeId;
-    });
+    */
   }
 }

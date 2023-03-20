@@ -21,6 +21,7 @@ import { UserIntakeComponent } from './components/user-intake/user-intake.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ResumeDisplayComponent } from './components/resume-display/resume-display.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     WorkExperienceComponent,
     WorkExperienceFormComponent,
     UserIntakeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ResumeDisplayComponent
   ],
   imports: [
     BrowserModule,
