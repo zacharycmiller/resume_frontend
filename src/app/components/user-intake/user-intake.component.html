@@ -1,0 +1,30 @@
+<h1>Welcome!</h1>
+<h3>Please provide the following information:</h3>
+<form [formGroup]="userIntakeForm" (ngSubmit)="onSubmit()">
+    
+    <label for="firstName">First Name:</label>
+    <input type="text" formControlName="firstName" required>
+
+    <label for="middle">Middle Name:</label>
+    <input type="text" formControlName="middleName">
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" formControlName="lastName" required>
+
+    
+    <label for="state">State:</label>
+    <select formControlName="state" required>
+        <option *ngFor="let state of getStateCodeOptions()" [value]="state">{{state}}</option>
+    </select>
+
+    <label for="city">City:</label>
+    <input type="text" formControlName="city">
+  
+    <label for="phone">Phone Number:</label>
+    <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" formControlName="phone">
+
+    <label for="email">Email:</label>
+    <input type="email" pattern=".+@+\.[a-z]{2,4}$/" formControlName="email">
+
+    <button type="submit">Save</button>
+  </form>

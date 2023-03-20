@@ -14,6 +14,13 @@ import { SitesComponent } from './components/sites/sites.component';
 import { PreviousExperienceComponent } from './components/previous-experience/previous-experience.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { ResumeComponent } from './components/resume/resume.component';
+import { WorkExperienceFormComponent } from './components/work-experience-form/work-experience-form.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { UserIntakeComponent } from './components/user-intake/user-intake.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +33,21 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     EducationComponent,
     SitesComponent,
     PreviousExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    ResumeComponent,
+    WorkExperienceComponent,
+    WorkExperienceFormComponent,
+    UserIntakeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]
