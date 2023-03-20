@@ -1,0 +1,52 @@
+<form [formGroup]="workExperienceForm" (ngSubmit)="onSubmit()" *ngIf="showForm">
+  <label for="companyName">Company Name:</label>
+  <input type="text" formControlName="companyName">
+
+  <label for="jobTitle">Job Title:</label>
+  <input type="text" formControlName="jobTitle">
+
+  <label for="startMonth">Start Month:</label>
+  <select formControlName="startMonth">
+    <option *ngFor="let month of getMonthOptions()" [value]="month">{{month}}</option>
+  </select>
+
+  <label for="startYear">Start Year:</label>
+  <select formControlName="startYear">
+    <option *ngFor="let year of getYearOptions()" [value]="year">{{year}}</option>
+  </select>
+
+  <label for="endMonth">End Month:</label>
+  <select formControlName="endMonth">
+    <option *ngFor="let month of getMonthOptions()" [value]="month">{{month}}</option>
+  </select>
+
+  <label for="endYear">End Year:</label>
+  <select formControlName="endYear">
+    <option *ngFor="let year of getYearOptions()" [value]="year">{{year}}</option>
+  </select>
+
+  <label>Location:</label>
+  <label for="remote">Remote</label>
+  <input type="radio" formControlName="locationType" value="Remote">
+
+  <label for="cityState">City, State</label>
+  <input type="radio" formControlName="locationType" value="CityState">
+
+  <div *ngIf="workExperienceForm.get('locationType')?.value === 'CityState'">
+    <label for="state">State:</label>
+    <select formControlName="selectedState">
+      <option *ngFor="let state of getStateCodeOptions()" [value]="state">{{state}}</option>
+    </select>
+
+    <label for="city">City:</label>
+    <input type="text" formControlName="city">
+  </div>
+
+  <label for="employmentType">Employment Type:</label>
+  <select formControlName="employmentType">
+    <option *ngFor="let employmentType of getEmploymentTypeOptions()" [value]="employmentType">{{employmentType}}</option>
+  </select>
+
+  <input type="hidden" formControlName="resumeId" [value]="resumeId">
+  <button type="submit">Save</button>
+</form>

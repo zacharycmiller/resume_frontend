@@ -9,11 +9,11 @@ import { AboutMeService } from '../../services/about-me.service';
 })
 
 export class AboutMeComponent {
-  @Input() id!: number;
+  @Input() resumeId!: number;
   aboutMe!: AboutMe;
 
   ngOnInit(): void {
-    this.getAboutMe(this.id);
+    this.getAboutMe(this.resumeId);
   }
 
   constructor(
