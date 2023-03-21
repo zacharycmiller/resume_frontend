@@ -13,19 +13,21 @@ export class AboutMeService {
   constructor(private http: HttpClient) { }
 
   // Method to get an AboutMe object by ID
-  getAboutMeById(id: number): Observable<AboutMe> {
-    const url = `${this.baseUrl}/1`;
+  getAboutMeByResumeId(id: number): Observable<AboutMe> {
+    const url = `${this.baseUrl}/${id}`;
     return this.http.get<AboutMe>(url);
   }
 
-  /*
-  * To be developed:
-  *
   // Method to update an existing AboutMe object
   updateAboutMe(aboutMe: AboutMe): Observable<any> {
     const url = `${this.baseUrl}/${aboutMe.id}`;
     return this.http.put(url, aboutMe);
   }
+
+  /*
+  * To be developed:
+  *
+  
 
   // Method to create a new AboutMe object
   createAboutMe(aboutMe: AboutMe): Observable<any> {
