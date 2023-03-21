@@ -1,6 +1,24 @@
-<div class="about-me-container" *ngIf=aboutMe>
-    <input class="full-name-container" [(ngModel)]="aboutMe.fullName" placeholder="Full Name">
-    
+<div class="about-me-container" *ngIf="aboutMe && mode === 'prod'">
+    <div class="full-name-container">{{aboutMe.fullName}}</div>
     <div class="job-title">{{aboutMe.jobTitle}}</div>
     <p class="introduction">{{aboutMe.introduction}}</p>
+    
+    <button (click)="changeMode()" *ngIf="mode === 'prod'">Edit</button>
 </div>
+
+<div class="edit-mode" *ngIf="mode === 'edit'">
+    <div> 
+        <input class="full-name-container" id="fullName" [(ngModel)]="aboutMe.fullName" placeholder="Full Name">
+    </div>
+    <div>
+        <input class="job-title" id="jobTitle" [(ngModel)]="aboutMe.jobTitle" placeholder="Job Title">
+    </div>
+    <div>
+        <textarea class="introduction" id="introduction" [(ngModel)]="aboutMe.introduction" placeholder="About Me"></textarea>
+    </div>
+
+    
+    <button (click)="save()" *ngIf="mode === 'edit'">Save</button>
+</div>
+
+
